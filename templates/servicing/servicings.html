@@ -1,0 +1,105 @@
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+{% block content %}
+  
+
+
+<section class="dash-heading py-5 text-dark ">
+    <div class="container">
+      <div class="row text-center">
+  
+        <div class="col-md-12">
+  
+          <div class="text-center">
+  
+            <h1 class="display-4"> Brows Service We Provide</h1>
+  
+            <p class="lead">Chose Your Needed One</p>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="servicing-list bg-dark">
+
+
+<div class=" container py-5 ">
+
+   
+    <div class=" row text-center " >
+
+
+
+        
+        {% if services %}
+
+
+
+
+        {% for service in services %}
+
+
+
+
+        <div class="card col-md-3 mx-auto ">
+
+            <div class="card-content">
+
+                <img class="img card-img-top" src="{{ service.image.url }}" />
+               
+                <div class="card-body">
+                    
+                  
+                    
+                    <div class="card-title"> <h3>{{ service.title }}</h3>  </div>
+                    <div class="card-subtitle">
+                        <p> {{service.description}} </p>
+                    </div>
+                    
+                    <div class="btn btn-primary"><a href="{% url 'service_details' service.id  %}">show details</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+          
+        {% endfor %}
+
+
+
+
+        {% else %}
+
+        <div>
+
+            <h1>No Services Available</h1>
+
+        </div>
+            
+        {% endif %}
+ 
+
+
+
+    </div>
+
+
+   
+</div>
+
+</section>
+
+
+
+{% endblock  %}

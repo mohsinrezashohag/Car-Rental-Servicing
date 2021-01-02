@@ -1,0 +1,137 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+body{
+
+    font-family: 'montserrat',sans-serif;
+    font:var(--dark)
+   
+}
+
+:root{
+
+  
+    --pure:#ffffff;
+    --yellow:#FFD000; 
+    
+
+}
+
+
+
+
+
+.baner-container{
+
+    background-image: url('../img/carmain.jpg');
+    background-repeat: no-repeat;
+    height: 600px;
+    justify-content:center;
+    align-items:center;
+}
+
+.btn{
+
+    padding: 8px 30px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    font-size:15px ;
+    
+}
+
+.btn-primary{
+
+
+    color:var(--dark);
+    background-color: var(--yellow);
+    transition: all .4s ease;
+
+}
+
+.btn-primary:hover{
+
+
+    background:transparent;
+    color: var(--pure);
+    border: 2px solid var(--pure);
+    
+}
+
+.btn-secondary{
+
+    color:var(--dark);
+    background-color: var(--pure);
+    transition: all .4s ease;
+}
+
+.btn-secondary:hover{
+
+    background:black;
+    color: var(--pure);
+    border: 2px solid var(--pure);
+    
+
+}
+
+
+
+
+.carspage-tittle{
+
+    background-color: var(--yellow);
+}
+
+.car-name{
+    background-color: var(--yellow);
+}
+
+.info{
+
+height: 263px;
+width: 179px;
+
+}
+
+.warning{
+
+    background-color: red;
+    
+}
+
+
+.dash-heading{
+
+    background-color: var(--yellow);
+}
+.car-renting{
+
+    background-color: var(--yellow);
+}
+
+.login-bg{
+
+    background-color: var(--yellow);
+}
+.register-div{
+
+    background-color: var(--yellow);
+}
+
+.carcard-bg{
+
+    background-color: var(--yellow);
+}
+
+
+.our-team{
+    background-color: var(--yellow);
+}
+
+.car-renting{
+
+
+    background-color: var(--yellow);
+}

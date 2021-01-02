@@ -1,0 +1,200 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+
+
+
+
+
+<section class="dash-heading py-5 text-dark ">
+  <div class="container">
+    <div class="row text-center">
+
+      <div class="col-md-12">
+
+        <div class="text-center">
+
+          <h1 class="display-4">Wellcome <strong> {{user.username}} </strong> <br> it's your Dashboard</h1>
+
+          <p class="lead">Manage your account</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+{% include "common/alerts.html" %}
+
+
+
+
+
+
+
+
+
+<section class="dash-body bg-dark">
+
+  <div class="intersested-car">
+
+
+    {% if interested_car_details %}
+
+
+
+
+
+    <h4 class="text-center text-white py-3">Here Are Your Requested Car List : </h4>
+    <br>
+
+
+    <table class="table container table-secondary table-striped">
+      <thead>
+        <tr>
+
+          <th scope="col">Car name</th>
+          <th scope="col">Contact Date</th>
+          <th>Confirm Or Not</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+        {% for i in interested_car_details %}
+
+
+        <tr>
+
+
+          <td>{{ i.car_name }}</td>
+          <td>{{ i.contact_date }}</td>
+
+          <td>
+
+            {% if i.confirm %}
+
+            <p class="text-success"> <strong> <i class="fa fa-check-square-o" aria-hidden="true"></i> We Confirm you
+                car.<br> You will get car in your door Soon </strong></p>
+
+            {% else %}
+
+            <p class="text-danger"> <strong> <i class="fa fa-times" aria-hidden="true"></i> Not Yet Confirm </strong>
+            </p>
+
+            {% endif %}
+
+          </td>
+
+        </tr>
+
+        {% endfor %}
+
+
+      </tbody>
+    </table>
+
+
+    {% else %}
+
+    <h1>you have not reuested any things</h1>
+
+    {% endif %}
+
+
+
+
+  </div>
+
+
+
+  <div class="interested-servicing">
+
+
+
+
+
+    {% if interested_servicing_details %}
+
+
+
+    <h4 class="text-center pt-5 text-white">Here Are Your Requested servicing : </h4>
+
+
+    <table class="table container table-secondary table-striped my-4 border-red-3">
+      <thead>
+        <tr>
+
+          <th scope="col">Service name</th>
+          <th scope="col">Problem Shortly</th>
+          <th>Contact Date</th>
+          <th>Confirm Or Not</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+        {% for i in interested_servicing_details %}
+
+
+        <tr>
+
+
+          <td>{{ i.service_name }}</td>
+          <td>{{ i.problem_shortly }}</td>
+          <td>{{ i.contact_date }}</td>
+
+          <td>
+
+            {% if i.confirm %}
+
+            <p class="text-success"> <strong><i class="fa fa-check-square-o" aria-hidden="true"></i> We Confirm your
+                servicing Requested. <br> We Wll reach you Soon .</strong> </p>
+
+            {% else %}
+
+            <p> <strong> <i class="fa fa-times" aria-hidden="true"></i> Not Yet Confirm </strong> </p>
+
+            {% endif %}
+
+          </td>
+
+        </tr>
+
+
+        {% endfor %}
+
+
+      </tbody>
+    </table>
+
+
+
+
+
+    {% else %}
+
+
+    <h1>you have not reuested any things</h1>
+
+
+
+    {% endif %}
+
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
+{% endblock %}

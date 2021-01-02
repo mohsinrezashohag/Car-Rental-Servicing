@@ -1,0 +1,166 @@
+{% extends "pages/base.html" %}
+
+{% block content %}
+{% load static %}
+
+
+
+
+
+<section class="dash-heading py-5 text-dark ">
+
+    <div class="container">
+
+      <div class="row text-center">
+  
+        <div class="col-md-12">
+  
+          <div class="text-center">
+  
+            <h1 class="display-4">About Us</h1>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="our-services bg-dark text-white">
+
+    <div class="container">
+    
+      <h2 class="service-tittle text-center p-3">OUR SERVICES</h2>
+    
+     
+    
+    <div class="row ">
+    
+    
+    
+    <div class="col-md-6 px-2">
+    
+    
+    <h3 class="text-center px-2">CAR RENTAL</h3>
+    
+      <img class="img-fluid" src="{% static 'img/car-on-road.jpg' %}" alt="">
+    
+    
+    <div class="details py-4">
+    
+      <h5 > We do rent the car inside/outside dhaka on day/hourly basis.
+        You can take our service to use your day/weekly trip </h5>
+      <a class="btn btn-primary m-5" href="{% url 'carlists' %}"> RENT CAR NOW </a>
+    
+    </div>
+    
+    
+    
+     
+    
+    </div>
+    
+    
+    
+    <div class="col-md-6  px-2">
+    
+    
+      <h3 class="text-center">CAR RENTAL</h3>
+    
+      <img class="img-fluid" src="{% static 'img/fuel-service.jpg' %}" alt="">
+    
+    
+    <div class="details py-4">
+    
+    
+      <h5 > We do rent the car inside/outside dhaka on day/hourly basis.
+        You can take our service to use your day/weekly trip </h5>
+        <a class="btn btn-primary m-5" href="{% url 'servicing' %}">GET SERVICE WE PROVIDE </a>
+    </div>
+    
+     
+  
+    
+    </div>
+    
+    
+      
+    </div>
+    
+    </div>
+    
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+<section class="our-team">
+
+
+<div class="container">
+
+  <div class="section-tittle">
+
+      <h1 class="content-tittle text-center py-4">OUR TEAM</h1>
+
+  </div>
+<div class="row">
+
+  <div class="member col-sm-12 col-md-6 col-lg-4">
+
+
+          <img class="img-center rounded-circle"src="{% static 'img/Mohsin Reza.jpg' %}" alt="">
+          <h5 class="sub-tittle text-center pt-3">CEO</h5>
+          <p class="text-center">Mohsin Reza Shohag</p>
+          <p class="text-center">Bsc In Software Engineering</p>
+          <p class="text-center">Daffodil International University</p>
+          
+
+  </div>
+
+  <div class="member col-sm-12 col-md-6 col-lg-4">
+
+
+    <img class="img-center rounded-circle"src="{% static 'img/turja.jpg' %}" alt="">
+
+      <h5 class="sub-tittle text-center pt-3">CEO</h5>
+      <p class="text-center">Abu Fattah Md. Turja</p>
+      <p class="text-center">Bsc In Software Engineering</p>
+      <p class="text-center">Daffodil International University</p>
+      
+
+</div>
+
+<div class="member col-sm-12 col-md-6 col-lg-4">
+
+
+    <img class="img-center rounded-circle"src="{% static 'img/nihal2.jpg' %}" alt="">
+  <h5 class="sub-tittle text-center pt-3">CEO</h5>
+  <p class="text-center">Mahmudur Rahman Nihal</p>
+  <p class="text-center">Bsc In Software Engineering</p>
+  <p class="text-center">Daffodil International University</p>
+  
+</div>
+
+</div>
+</div>
+
+
+
+
+</section>
+
+
+
+  
+{% endblock  %}

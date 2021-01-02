@@ -1,0 +1,160 @@
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+
+
+{% include "common/alerts.html" %}
+
+
+<section class="banner">
+
+  <div class=" baner-container d-flex  ">
+
+    <div class="baner-content text-center">
+        <h1 class="main-text font-weight-bolder text-white p-5 "> BEST CAR RENT AND SERVICING CENTER </h1>
+ 
+        <a class="btn btn-primary m-5" href="{% url 'carlists' %}"> RENT CAR NOW </a>
+        <a class="btn btn-primary m-5" href="{% url 'servicing' %}">GET CAR SERVICING </a>
+
+    </div>
+
+  </div>
+   
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<div class="car-renting  text-dark">
+
+
+
+<div class="container">
+
+
+  <h3 class="rent-details text-center  py-3">RENT A CAR SERVICE</h3>
+
+<div class="row ">
+
+<div class="col-md-6 py-5 ">
+
+ 
+
+<div class="car-image">
+  <img class="img-fluid" src="{% static 'img/car-on-road.jpg' %}" alt="">
+</div>
+</div>
+
+
+<div class="col-md-6 py-5">
+
+<h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod dignissimos cupiditate omnis commodi ut voluptas nam sequi odit vitae non, dolorum aspernatur ea consequatur cumque vero? Ipsa perspiciatis omnis ducimus enim molestias aspernatur odit minima cupiditate modi, necessitatibus ut quis alias sapiente eveniet magnam incidunt? Fuga tenetur eos aperiam veniam.
+</h5>
+
+<a class="btn btn-secondary m-5" href="{% url 'carlists' %}"> RENT CAR NOW </a>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<section class="our-services bg-dark text-white">
+
+<div class="container">
+
+  <h2 class="service-tittle text-center p-3">OUR SERVICES</h2>
+
+ 
+
+<div class="row ">
+
+
+
+<div class="col-md-6 px-2">
+
+
+<h3 class="text-center px-2">CAR RENTAL</h3>
+
+  <img class="img-fluid" src="{% static 'img/car-on-road.jpg' %}" alt="">
+
+
+<div class="details py-4">
+
+  <h5 > We do rent the car inside/outside dhaka on day/hourly basis.
+    You can take our service to use your day/weekly trip </h5>
+  <a class="btn btn-primary m-5" href="{% url 'carlists' %}"> RENT CAR NOW </a>
+
+</div>
+
+
+
+ 
+
+</div>
+
+
+
+<div class="col-md-6  px-2">
+
+
+  <h3 class="text-center">CAR SERVICING</h3>
+
+  <img class="img-fluid" src="{% static 'img/fuel-service.jpg' %}" alt="">
+
+
+<div class="details py-4">
+
+
+  <h5 > We do Serving Cars. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore aut quibusdam ipsa labore expedita tempora ea alias doloribus eveniet commodi! </h5>
+  <a class="btn btn-primary m-5" href="{% url 'servicing' %}">GET CAR SERVICING </a>
+</div>
+
+ 
+
+
+</div>
+
+
+  
+</div>
+
+</div>
+
+</section>
+
+
+
+ 
+
+
+
+{% endblock  %}
+

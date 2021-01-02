@@ -1,0 +1,113 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+
+
+
+<section class="carspage-tittle py-5 text-white ">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12 text-dark">
+        <h1 class="display-4">Browse Our Cars</h1>
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section  class="carlist bg-dark py-4">
+  <div class="container">
+    <div class="row">
+
+
+      {% if carlistings %}
+
+
+      {% for car in carlistings  %}
+
+
+      <div class="col-md-6 col-lg-4 mb-4 text-dark">
+        <div class="card listing-preview">
+          <img class="card-img-top" src="{{car.photo_main.url}}" alt="">
+
+          <div class="card-body bg-seondary ">
+            <div class="listing-heading text-center">
+              <h5 class="text-primary"><strong> Car Name :</strong> {{ car.title }}</h5>
+              <h6 class="text-danger "><strong>Rent Per Day :</strong> {{car.rent_perday}} Taka</h6>
+            </div>
+
+
+            <div class="row py-2 ">
+              <div class="col-6">
+                </i> Available Seats : {{car.seats}}</div>
+              <div class="col-6">
+                <p>Type : {{car.type}}
+              </div>
+              </p>
+            </div>
+
+            <div class="row py-2 ">
+              <div class="col-12">
+                <p><strong>Some words about this car :</strong><br>{{car.extra_message}} </p>
+              </div>
+              <hr>
+              <a  href="{% url 'onecar' car.id %}" class="btn btn-primary btn-block text-light bg-dark">More Info</a>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+
+      {% endfor %}
+
+
+
+      {% else %}
+
+
+      <div class="col-md-12">
+
+        <h3> No Car Available </h3>
+      </div>
+
+      {% endif %}
+
+
+
+
+    
+ 
+
+  </section>
+
+  <div class="container p-5">
+
+
+    <div class="pagination">
+      <span class="step-links">
+          {% if carlistings.has_previous %}
+              <a href="?page=1">&laquo; first</a>
+              <a href="?page={{ carlistings.previous_page_number }}">previous</a>
+          {% endif %}
+  
+          <span class="current">
+              Page {{ carlistings.number }} of {{ carlistings.paginator.num_pages }}.
+          </span>
+  
+          {% if carlistings.has_next %}
+              <a href="?page={{ carlistings.next_page_number }}">next</a>
+              <a href="?page={{ carlistings.paginator.num_pages }}">last &raquo;</a>
+          {% endif %}
+      </span>
+  </div>
+
+
+
+  </div>
+
+      {% endblock %}

@@ -1,0 +1,204 @@
+{% extends "pages/base.html" %}
+
+
+{% block content %}
+  
+
+
+
+<section class="dash-heading py-5 text-dark ">
+
+    <div class="container">
+
+      
+        <div class="row text-center">
+  
+        <div class="col-md-12">
+  
+     <div class="text-center">
+  
+             <h1 class="display-4">Servicing & Pricing Details </h1>
+  
+            <p class="lead">Show Our Current Pricing & services </p>
+  
+   </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  
+
+
+
+
+<section class="car-table">
+
+    <h3 class="text-center mt-5"> Available Car Rents And Details : </h3>
+
+<div class="row">
+
+
+    <table class="table container table-secondary table-striped my-4 border-red-3">
+      
+      
+      
+
+        
+
+
+  
+        
+        <thead>
+          
+            <tr>
+  
+            <th scope="col">Car name </th>
+            <th scope="col">Seat </th>
+            <th>Car Type  </th>
+            <th><strong>Rent Perday </strong></th>
+          </tr>
+        </thead>
+        <tbody>
+  
+  
+          {% for i in cars_info %}
+  
+  
+          <tr>
+  
+  
+            <td>{{ i.title }}</td>
+            <td>{{ i.seats }}</td>
+            <td>{{ i.type }}</td>
+            <td>{{ i.rent_perday }}</td>
+  
+         
+  
+          </tr>
+  
+  
+          {% endfor %}
+  
+  
+        </tbody>
+      </table>
+  
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="Service-table">
+
+    <h3 class="text-center mt-5"> Currently Survicing We Provide : </h3>
+
+<div class="row">
+
+
+    <table class="table container table-secondary table-striped my-4 border-red-3">
+      
+      
+      
+
+        
+
+
+  
+        
+        <thead>
+          <tr>
+  
+            <th scope="col">Service Name </th>
+            <th scope="col">Details : </th>
+       
+          </tr>
+        </thead>
+        <tbody>
+  
+  
+          {% for i in servicing_info %}
+  
+  
+          <tr>
+  
+  
+            <td>{{ i.title }}</td>
+            <td>{{ i.description }}</td>
+        
+           
+  
+         
+  
+          </tr>
+  
+  
+          {% endfor %}
+  
+  
+        </tbody>
+      </table>
+  
+
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock  %}
